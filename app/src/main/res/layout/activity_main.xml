@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TicTacToe"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="355dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/grid" />
+<TableLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="75dp"
+    android:layout_marginTop="105dp"
+    >
+<TableRow>
+    <Button
+        android:id="@+id/checkBox"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView"
+        android:onClick="onBoxClicked"
+        android:paddingLeft="100dp" />
+
+    <Button
+        android:id="@+id/checkBox2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/checkBox6"
+        android:layout_alignTop="@+id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:onClick="onBoxClicked" />
+
+    <Button
+        android:id="@+id/checkBox3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/checkBox6"
+        android:layout_alignTop="@+id/checkBox2"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:onClick="onBoxClicked" />
+</TableRow>
+<TableRow>
+    <Button
+        android:id="@+id/checkBox4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        android:layout_alignLeft="@+id/checkBox"
+        android:layout_alignStart="@+id/checkBox"
+        android:layout_below="@+id/checkBox"
+        android:onClick="onBoxClicked" />
+
+    <Button
+        android:id="@+id/checkBox5"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2"
+        android:layout_below="@+id/checkBox2"
+        android:onClick="onBoxClicked" />
+
+    <Button
+        android:id="@+id/checkBox6"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/checkBox8"
+        android:layout_alignLeft="@+id/checkBox3"
+        android:layout_alignStart="@+id/checkBox3"
+        android:onClick="onBoxClicked" />
+</TableRow>
+<TableRow>
+    <Button
+        android:id="@+id/checkBox7"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        android:layout_alignLeft="@+id/checkBox"
+        android:layout_alignStart="@+id/checkBox"
+        android:layout_below="@+id/checkBox4"
+        android:onClick="onBoxClicked" />
+
+    <Button
+        android:id="@+id/checkBox8"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/checkBox7"
+        android:layout_alignTop="@+id/checkBox7"
+        android:layout_centerHorizontal="true"
+        android:checked="false"
+        android:onClick="onBoxClicked" />
+
+    <Button
+        android:id="@+id/checkBox9"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/checkBox8"
+        android:layout_alignLeft="@+id/checkBox6"
+        android:layout_alignStart="@+id/checkBox6"
+        android:layout_below="@+id/checkBox6"
+        android:checked="false"
+        android:onClick="onBoxClicked" />
+</TableRow>
+
+</TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/app_tictactoe"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp" />
+
+    <TextView
+        android:id="@+id/name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:text="insert_name_here" />
+
+    <Button
+        android:id="@+id/restart_Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignTop="@+id/imageView"
+        android:text="@string/restart"
+        android:visibility="invisible"
+        android:onClick="restartGame"
+        />
+
+</RelativeLayout>
