@@ -57,6 +57,7 @@ public class TicTacToe extends Activity {
     //on click method sets the box to an x and also sets a value to the 2d array dataset
     public void onBoxClicked(View view){
         switch (view.getId()){
+                //ode is repeatative and should be cleaned up by implementing a method that accepts all variables as parameters
             case R.id.checkBox:
                 if(board[0][0] == EMPTY && gameState == PLAYING) {
                     board[0][0] = CROSS;
